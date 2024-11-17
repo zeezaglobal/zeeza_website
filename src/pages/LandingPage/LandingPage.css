@@ -1,10 +1,39 @@
 /* src/pages/LandingPage.css */
+
+
+.landing-main-container {
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ width: 100vw;         /* Full viewport width */
+  height: 100vh; 
+  margin-left: 300px;  /* Adjust as needed */
+  margin-right: 300px; 
+
+}
 .landing-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
+  display: flex;
+  flex-direction: column;
+
+
+
+}
+
+.large-text-container {
+  display: flex;
+  gap: 20px;
+
+  align-items: flex-end; /* Align items at the bottom */
+
+}
+.small-text-container {
+  display: flex;
+
+ width: 600px;
+
+}
+.buttons-div-container{
+gap: 20px;
+  display: flex;
+
+}
