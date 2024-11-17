@@ -26,8 +26,20 @@ function LandingPage() {
         fontWeight="100"/>
         </div>
         <div className="buttons-div-container">
-        <LargeButton label="Click Me" onClick={handleButtonClick} />
-        <LargeButton label="Click Me" onClick={handleButtonClick} />
+        <LargeButton
+        label="Looking for a Website?"
+        onClick={() => console.log('Button clicked!')}
+        textColor={colors.white}
+        fillColor={colors.teal}
+        strokeColor={colors.teal}
+      />
+        <LargeButton
+        label="Looking for an App?"
+        onClick={() => console.log('Button clicked!')}
+        textColor={colors.black}
+        fillColor={colors.white}
+        strokeColor={colors.teal}
+      />
       </div>
     </div>
     </div>

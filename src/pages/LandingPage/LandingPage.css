@@ -35,5 +35,6 @@
 .buttons-div-container{
 gap: 20px;
   display: flex;
+  margin-top: 20px;
 
 }
