@@ -6,20 +6,19 @@ import "./LandingPage.css"; // Optional if you want custom styles for the landin
 import LargeText from "../../components/Texts/LargeText";
 import colors from "../../Resourses/colors";
 import SmallText from "../../components/Texts/SmallText";
-import TextButton from "../../components/Buttons/TextButton";
+
 function LandingPage() {
-  const navigate = useNavigate();
-  const handleButtonClick = () => {
-    console.log("Button clicked!");
-  };
-  const handleClick = () => {
-    alert("Text button clicked!");
+
+
+  const handleCustomerServiceClick = () => {
+    alert("Redirecting to customer service...");
+ 
   };
 
   return (
     <div className="landing-main-container">
-      <div className="top-nav-bar">
-        <TextButton text="Click Me" textColor="#007474" onClick={handleClick} />
+      <div className="customer-service" onClick={handleCustomerServiceClick}>
+        Customer Service
       </div>
 
       <div className="landing-container">
@@ -33,7 +32,7 @@ function LandingPage() {
         </div>
         <div className="small-text-container">
           <SmallText
-            text="Helping Winnipeg’s Small Businesses Thrive Online! Affordable Website and App Development.Get a free design demo, only pay when satisfied—flexible packages made for your budget and vision."
+            text="Helping Winnipeg’s Small Businesses Thrive Online! Affordable Website and App Development. Get a free design demo, only pay when satisfied—flexible packages made for your budget and vision."
             color={colors.white}
             fontWeight="100"
           />
