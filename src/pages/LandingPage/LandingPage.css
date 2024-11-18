@@ -1,22 +1,19 @@
 /* src/pages/LandingPage.css */
 
-
 .landing-main-container {
+  position: relative;
   display: flex;
   flex-direction: column;
- justify-content: center;
- width: 100vw;         /* Full viewport width */
-  height: 100vh; 
-  margin-left: 300px;  /* Adjust as needed */
-  margin-right: 300px; 
-
+  justify-content: center;
+  width: 100vw; /* Full viewport width */
+  height: 100vh;
+  padding-left: 300px; /* Adjust as needed */
+  padding-right: 300px;
+  background-color: teal;
 }
 .landing-container {
   display: flex;
   flex-direction: column;
-
-
-
 }
 
 .large-text-container {
@@ -24,17 +21,26 @@
   gap: 20px;
 
   align-items: flex-end; /* Align items at the bottom */
-
 }
 .small-text-container {
   display: flex;
 
- width: 600px;
-
+  width: 680px;
 }
-.buttons-div-container{
-gap: 20px;
+.buttons-div-container {
+  gap: 20px;
   display: flex;
   margin-top: 20px;
+}
 
+.top-nav-bar {
+  position: "absolute";
+  position: absolute; /* Remove quotes */
+  top: 0; /* Align to top */
+  right: 0; /* Align to right */
+  display: flex;
+  justify-content: flex-end;
+  background-color: brown;
+  width: 100%;
+  padding: 10px;
 }
