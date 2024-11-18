@@ -1,7 +1,7 @@
 // src/pages/LandingPage.js
 import React from "react";
 import LargeButton from "../../components/Buttons/LargeButton";
-import { useNavigate } from "react-router-dom";
+
 import "./LandingPage.css"; // Optional if you want custom styles for the landing page
 import LargeText from "../../components/Texts/LargeText";
 import colors from "../../Resourses/colors";
