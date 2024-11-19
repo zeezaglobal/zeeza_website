@@ -12,3 +12,9 @@
         font-size: 12px;
       }
   }
+  @media (max-width: 480px) {
+    .small-text {
+        font-family: 'Roboto, sans-serif';
+        font-size: 12px;
+      }
+  }
