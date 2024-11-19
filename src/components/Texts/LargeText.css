@@ -1,0 +1,16 @@
+/* src/components/Text/LargeText.css */
+
+.large-text {
+    font-family: 'Roboto, sans-serif';
+    font-size: 60px;
+    line-height: 0;
+  }
+
+  @media (max-width: 768px) {
+    /* Adjust customer service link for smaller screens */
+    .large-text {
+        font-family: 'Roboto, sans-serif';
+        font-size: 40px;
+        line-height: 0;
+      }
+  }

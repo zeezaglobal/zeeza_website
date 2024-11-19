@@ -1,17 +1,15 @@
 // src/components/Text/SmallText.js
 import React from 'react';
 import PropTypes from 'prop-types';
+import './SmallText.css';  // Import the CSS file
 
 function SmallText({ text, color, fontWeight }) {
   const style = {
-    fontFamily: 'Roboto, sans-serif',
-    fontSize: '15px',
     color: color,
     fontWeight: fontWeight,
-    
   };
 
-  return <p style={style}>{text}</p>;
+  return <p className="small-text" style={style}>{text}</p>;
 }
 
 SmallText.propTypes = {
