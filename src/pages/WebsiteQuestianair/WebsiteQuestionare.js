@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import LargeButton from "../../components/Buttons/LargeButton";
 import colors from "../../Resourses/colors";
 import "./WebsiteQuestionare.css";
+import { useNavigate } from "react-router-dom";
 
 function WebsiteQuestionare() {
   const [websiteType, setWebsiteType] = useState("");
   const [logoAndContent, setLogoAndContent] = useState("");
 
+  const navigate = useNavigate();
   const handleWebsiteTypeChange = (event) => {
     setWebsiteType(event.target.value);
   };
@@ -21,11 +23,10 @@ function WebsiteQuestionare() {
       return;
     }
   
-    console.log({
-      websiteType,
-      logoAndContent,
-    });
-    alert("Estimate will be generated based on your inputs!");
+   // Navigate to the estimation page and pass data
+   navigate("/estimation", {
+    state: { websiteType, logoAndContent },
+  });
   };
 
   return (
