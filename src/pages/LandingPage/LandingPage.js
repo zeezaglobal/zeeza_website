@@ -3,9 +3,9 @@ import React from "react";
 import LargeButton from "../../components/Buttons/LargeButton";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css"; // Optional if you want custom styles for the landing page
-import LargeText from "../../components/Texts/LargeText";
+
 import colors from "../../Resourses/colors";
-import SmallText from "../../components/Texts/SmallText";
+
 
 function LandingPage() {
 
@@ -22,20 +22,17 @@ function LandingPage() {
    
 
       <div className="landing-container">
-        <div className="large-text-container">
-          <LargeText
-            text="Lets Grow your "
-            color={colors.white}
-            fontWeight="50"
-          />
-          <LargeText text="Business" color={colors.white} fontWeight="500" />
+      <div className="large-text-container">
+          <h1 style={{ color: colors.white, fontWeight: "500" }}>
+            Let's Grow Your Business
+          </h1>
         </div>
         <div className="small-text-container">
-          <SmallText
-            text="Helping Winnipeg’s Small Businesses Thrive Online! Affordable Website and App Development. Get a free design demo, only pay when satisfied—flexible packages made for your budget and vision."
-            color={colors.white}
-            fontWeight="100"
-          />
+          <h5 style={{ color: colors.white, fontWeight: "100" }}>
+            Helping Winnipeg’s Small Businesses Thrive Online! Affordable Website 
+            and App Development. Get a free design demo, only pay when satisfied—flexible packages 
+            made for your budget and vision.
+          </h5>
         </div>
         <div className="buttons-div-container">
           <LargeButton

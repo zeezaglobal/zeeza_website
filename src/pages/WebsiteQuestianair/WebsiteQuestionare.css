@@ -1,31 +1,46 @@
+/* src/pages/WebsiteQuestionare.css */
+
 /* General container styles */
 .website-questionare-container {
-    padding: 20px;
-   
-   
-    font-family: Arial, sans-serif;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+.large-text-container{
+
+  margin-bottom: 20px;
+}
+/* Form field styling */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for the 'View Estimate' button */
+.large-button-container {
+  margin-top: 30px;
+  text-align: center; /* Center the button */
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .website-questionare-container {
+    padding: 15px;
   }
-  
-  /* Default layout for large screens */
-  .large-text-container {
-  
-    display: flex;
-  
-    align-items: center;
-    flex-direction: row; /* Horizontal alignment */
-    text-align: center;
-    gap: 10px;
+
+
+  label, select {
+    font-size: 14px; /* Adjust font size for form fields on small screens */
   }
-  
-  /* Responsive layout for mobile screens */
-  @media (max-width: 768px) {
-    .large-text-container {
-      flex-direction: column; /* Stack vertically */
-      text-align: center;
-    }
-  
-    .large-text-container h1 {
-      font-size: 24px; /* Smaller font size for smaller screens */
-      line-height: 1.2;
-    }
-  }
+}

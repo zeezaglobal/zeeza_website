@@ -8,38 +8,51 @@
   align-items: center; /* Center horizontally */
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  padding: 0 20px; /* Reduced padding for better responsiveness */
-  background-color: teal;
-  box-sizing: border-box; /* Ensure padding does not affect overall width */
+  padding: 0 20px; /* Ensure padding for better responsiveness */
+  background-color: teal; /* Background color for the page */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .landing-container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center content in the container */
-  max-width: 800px; /* Limit width for readability */
-  text-align: center;
+  max-width: 800px; /* Limit width for better readability */
+  text-align: center; /* Center-align text */
 }
 
 .large-text-container {
-  display: flex;
-  gap: 10px; /* Adjusted for better text flow */
-  align-items: flex-end; /* Align items at the bottom */
+  margin-bottom: 10px; /* Space below large text */
+}
+
+.large-text-container h1 {
+  font-size: 3rem; /* Adjust size for large text */
+  font-weight: 500;
+  color: white;
+  margin: 0; /* Remove default margin for consistent spacing */
 }
 
 .small-text-container {
   display: flex;
   justify-content: center; /* Center the small text */
-  width: 100%; /* Full width within the max-width container */
+  width: 100%; /* Full width within max-width container */
   max-width: 680px; /* Limit width for readability */
   margin-top: 10px; /* Space between large and small text */
 }
 
+.small-text-container h5 {
+  font-size: 1rem; /* Adjust size for small text */
+  font-weight: 400;
+  color: white;
+  line-height: 1.4; /* Add better readability with line spacing */
+  margin: 0; /* Remove default margin for consistent spacing */
+}
+
 .buttons-div-container {
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Space between buttons */
   margin-top: 30px; /* Space above buttons */
-  flex-wrap: wrap; /* Wrap buttons for smaller screens */
+  flex-wrap: wrap; /* Allow buttons to wrap for smaller screens */
   justify-content: center; /* Center buttons within the container */
 }
 
@@ -51,40 +64,50 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .customer-service:hover {
   color: #e0e0e0; /* Slightly lighter color on hover */
 }
 
-
-
-
-
+/* Responsive Adjustments */
 @media (max-width: 720px) {
-  /* Additional adjustments for very small screens */
   .landing-main-container {
     padding: 10px;
- background-color: blue;
   }
 
-  .large-text-container .LargeText {
-    font-size: 1.5rem; /* Adjust as needed */
-  background-color: aqua;
+  .large-text-container h1 {
+    font-size: 2rem; /* Reduce font size for smaller screens */
   }
 
-  .small-text-container .SmallText {
-    font-size: 0.9rem;
+  .small-text-container h5 {
+    font-size: 0.9rem; /* Smaller text for better readability */
   }
 
   .buttons-div-container {
-    width: 100%;
+    width: 100%; /* Make buttons container full-width */
+    gap: 10px; /* Reduce spacing between buttons */
   }
 
   /* Reduce button padding for smaller screens */
   .LargeButton {
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+}
+
+/* Additional Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+  .large-text-container h1 {
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  .small-text-container h5 {
+    font-size: 0.8rem; /* Adjust small text size */
+  }
+
+  .buttons-div-container {
+    gap: 8px; /* Further reduce spacing for smaller screens */
   }
 }
