@@ -58,44 +58,20 @@
   color: #e0e0e0; /* Slightly lighter color on hover */
 }
 
-/* Responsive adjustments for smaller screens */
 
-@media (max-width: 768px) {
-  /* Adjust customer service link for smaller screens */
-  .customer-service {
-    top: 10px;
-    right: 10px;
-    font-size: 0.9rem;
-  }
 
-  /* Stack buttons vertically */
-  .buttons-div-container {
-    flex-direction: column;
 
-    width: 100%;
-  }
 
-  /* Adjust text sizes */
-  .large-text-container .LargeText {
-    font-size: 2rem; /* Adjust as needed */
-  }
-
-  .small-text-container .SmallText {
-    font-size: 1rem; /* Adjust as needed */
-    line-height: 1.5;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   /* Additional adjustments for very small screens */
   .landing-main-container {
     padding: 10px;
- 
+ background-color: blue;
   }
 
   .large-text-container .LargeText {
     font-size: 1.5rem; /* Adjust as needed */
-  
+  background-color: aqua;
   }
 
   .small-text-container .SmallText {

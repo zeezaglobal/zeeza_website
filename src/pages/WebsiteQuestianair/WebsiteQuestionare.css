@@ -1,0 +1,31 @@
+/* General container styles */
+.website-questionare-container {
+    padding: 20px;
+   
+   
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Default layout for large screens */
+  .large-text-container {
+  
+    display: flex;
+  
+    align-items: center;
+    flex-direction: row; /* Horizontal alignment */
+    text-align: center;
+    gap: 10px;
+  }
+  
+  /* Responsive layout for mobile screens */
+  @media (max-width: 768px) {
+    .large-text-container {
+      flex-direction: column; /* Stack vertically */
+      text-align: center;
+    }
+  
+    .large-text-container h1 {
+      font-size: 24px; /* Smaller font size for smaller screens */
+      line-height: 1.2;
+    }
+  }
