@@ -13,7 +13,7 @@ function LandingPage() {
   const navigate = useNavigate();
 
   const handleWebsiteButtonClick = () => {
-    navigate("/website-questionnaire"); // Navigate to the website questionnaire
+    navigate("/Website-questionnaire"); // Navigate to the website questionnaire
   };
 
 

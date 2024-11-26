@@ -19,32 +19,33 @@ function WebsiteQuestionare() {
 
   const handleViewEstimateClick = () => {
     if (!websiteType || !logoAndContent) {
-      alert("Please select both the website type and whether you'll provide the logo and content.");
+      alert(
+        "Please select both the website type and whether you'll provide the logo and content."
+      );
       return;
     }
-  
-   // Navigate to the estimation page and pass data
-   navigate("/estimation", {
-    state: { websiteType, logoAndContent },
-  });
+
+    // Navigate to the estimation page and pass data
+    navigate("/Estimation", {
+      state: { websiteType, logoAndContent },
+    });
   };
 
   return (
     <div className="website-questionare-container">
-      
       <div className="large-text-container">
-      <h1 style={{ color: 'black' }}>
-  Answer Few Questions to Get Free Estimate.
-</h1>
-<h5 style={{ color: colors.grey, fontWeight: 400 }}>
+        <h1 style={{ color: "black" }}>
+          Answer Few Questions to Get Free Quote.
+        </h1>
+        <h5 style={{ color: colors.grey, fontWeight: 400 }}>
           One more step to see your quote.
         </h5>
       </div>
-    
-   
-    
+
       <div style={{ margin: "20px 0" }}>
-        <label style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}>
+        <label
+          style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}
+        >
           Which type of website do you need?
         </label>
         <select
@@ -61,16 +62,20 @@ function WebsiteQuestionare() {
           <option value="">-- Select Website Type --</option>
           <option value="Single Page Static">Single Page Static</option>
           <option value="Multiple Page Static">Multiple Page Static</option>
-          <option value="Appointment Booking System">Appointment Booking System</option>
+          <option value="Appointment Booking System">
+            Appointment Booking System
+          </option>
           <option value="E-commerce Store">E-commerce Store</option>
           <option value="Portfolio Website">Portfolio Website</option>
           <option value="Blog or News Website">Blog or News Website</option>
           <option value="Membership System">Membership System</option>
         </select>
       </div>
-    
+
       <div style={{ margin: "20px 0" }}>
-        <label style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}>
+        <label
+          style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}
+        >
           Will you be providing the logo and website content?
         </label>
         <select
@@ -89,7 +94,7 @@ function WebsiteQuestionare() {
           <option value="No">No</option>
         </select>
       </div>
-    
+
       <div style={{ marginTop: "30px" }}>
         <LargeButton
           label="View Estimate"
