@@ -1,0 +1,57 @@
+/* General container styles */
+.mobile-app-questionare-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Optional: Light background color */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  /* Large text container */
+  .large-text-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form field styling */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  input, 
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input:focus, 
+  select:focus {
+    border-color: #00796b; /* Optional: Highlight color for focused input */
+    outline: none;
+  }
+  
+  /* Styling for the 'View Estimate' button */
+  .large-button-container {
+    margin-top: 30px;
+    text-align: center; /* Center the button */
+  }
+  
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    .mobile-app-questionare-container {
+      padding: 15px;
+    }
+  
+    label,
+    input,
+    select {
+      font-size: 14px; /* Adjust font size for form fields on small screens */
+    }
+  }
+  

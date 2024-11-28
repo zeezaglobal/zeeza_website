@@ -15,6 +15,9 @@ function LandingPage() {
   const handleWebsiteButtonClick = () => {
     navigate("/Website-questionnaire"); // Navigate to the website questionnaire
   };
+  const handleAppButtonClick= () => {
+    navigate("/Mobile-questionare"); // Navigate to the website questionnaire
+  };
 
 
   return (
@@ -44,7 +47,7 @@ function LandingPage() {
           />
           <LargeButton
             label="Looking for an App?"
-            onClick={() => console.log("Button clicked!")}
+            onClick={handleAppButtonClick}
             textColor={colors.black}
             fillColor={colors.white}
             strokeColor={colors.teal}

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import LargeButton from "../../components/Buttons/LargeButton";
 import colors from "../../Resourses/colors";
-import "./WebsiteQuestionare.css";
+import "./MobileAppQuestionare.css";
 import { useNavigate } from "react-router-dom";
 
-function WebsiteQuestionare() {
+function MobileAppQuestionare() {
   const [email, setEmail] = useState("");
-  const [websiteType, setWebsiteType] = useState("");
+  const [platform, setPlatform] = useState("");
   const [logoAndContent, setLogoAndContent] = useState("");
+  const [tabletSupport, setTabletSupport] = useState("");
 
   const navigate = useNavigate();
 
@@ -15,12 +16,16 @@ function WebsiteQuestionare() {
     setEmail(event.target.value);
   };
 
-  const handleWebsiteTypeChange = (event) => {
-    setWebsiteType(event.target.value);
+  const handlePlatformChange = (event) => {
+    setPlatform(event.target.value);
   };
 
   const handleLogoAndContentChange = (event) => {
     setLogoAndContent(event.target.value);
+  };
+
+  const handleTabletSupportChange = (event) => {
+    setTabletSupport(event.target.value);
   };
 
   const handleViewEstimateClick = () => {
@@ -31,21 +36,23 @@ function WebsiteQuestionare() {
       return;
     }
 
-    if (!websiteType || !logoAndContent) {
+    if (!platform || !logoAndContent || !tabletSupport) {
       alert(
-        "Please select both the website type and whether you'll provide the logo and content."
+        "Please select all options, including platform, logo and content, and tablet support."
       );
       return;
     }
 
+ 
+
     // Navigate to the estimation page and pass data
     navigate("/Estimation", {
-      state: { email, websiteType, logoAndContent },
+      state: { email, platform, logoAndContent, tabletSupport },
     });
   };
 
   return (
-    <div className="website-questionare-container">
+    <div className="mobile-app-questionare-container">
       <div className="large-text-container">
         <h1 style={{ color: "black" }}>
           Answer Few Questions to Get Free Quote.
@@ -58,7 +65,7 @@ function WebsiteQuestionare() {
       {/* Email field */}
       <div style={{ margin: "20px 0" }}>
         <label
-          style={{ display: "block", marginBottom: "10px",fontWeight: "500" }}
+          style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}
         >
           Enter Your Email
         </label>
@@ -70,7 +77,6 @@ function WebsiteQuestionare() {
           style={{
             width: "100%",
             padding: "10px",
-   
             fontSize: "16px",
             border: "1px solid #ccc",
             borderRadius: "4px",
@@ -78,16 +84,16 @@ function WebsiteQuestionare() {
         />
       </div>
 
-      {/* Website type dropdown */}
+      {/* Platform type dropdown */}
       <div style={{ margin: "20px 0" }}>
         <label
           style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}
         >
-          Which type of website do you need?
+          Which platform do you need the app for?
         </label>
         <select
-          value={websiteType}
-          onChange={handleWebsiteTypeChange}
+          value={platform}
+          onChange={handlePlatformChange}
           style={{
             width: "100%",
             padding: "10px",
@@ -96,16 +102,10 @@ function WebsiteQuestionare() {
             borderRadius: "4px",
           }}
         >
-          <option value="">-- Select Website Type --</option>
-          <option value="Single Page Static">Single Page Static</option>
-          <option value="Multiple Page Static">Multiple Page Static</option>
-          <option value="Appointment Booking System">
-            Appointment Booking System
-          </option>
-          <option value="E-commerce Store">E-commerce Store</option>
-          <option value="Portfolio Website">Portfolio Website</option>
-          <option value="Blog or News Website">Blog or News Website</option>
-          <option value="Membership System">Membership System</option>
+          <option value="">-- Select Platform --</option>
+          <option value="Android">Android</option>
+          <option value="iOS">iOS</option>
+          <option value="Android/iOS">Android/iOS</option>
         </select>
       </div>
 
@@ -114,11 +114,35 @@ function WebsiteQuestionare() {
         <label
           style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}
         >
-          Will you be providing the logo and website content?
+          Will you be providing the logo and app content?
         </label>
         <select
           value={logoAndContent}
           onChange={handleLogoAndContentChange}
+          style={{
+            width: "100%",
+            padding: "10px",
+            fontSize: "16px",
+            border: "1px solid #ccc",
+            borderRadius: "4px",
+          }}
+        >
+          <option value="">-- Select Yes or No --</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      {/* Tablet support dropdown */}
+      <div style={{ margin: "20px 0" }}>
+        <label
+          style={{ display: "block", marginBottom: "10px", fontWeight: "500" }}
+        >
+          Do you need support for tablets?
+        </label>
+        <select
+          value={tabletSupport}
+          onChange={handleTabletSupportChange}
           style={{
             width: "100%",
             padding: "10px",
@@ -147,4 +171,4 @@ function WebsiteQuestionare() {
   );
 }
 
-export default WebsiteQuestionare;
+export default MobileAppQuestionare;
